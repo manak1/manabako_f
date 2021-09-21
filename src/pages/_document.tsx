@@ -5,8 +5,7 @@ class Document extends NextDocument<Props> {
   render() {
     return (
       <Html lang="ja">
-        <Head>
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
