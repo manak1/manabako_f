@@ -15,6 +15,7 @@ module.exports = {
       {
         allow: ['warn', 'error']
       }
-    ]
+    ],
+    '@typescript-eslint/no-var-requires': 0
   }
 }

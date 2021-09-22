@@ -5,5 +5,8 @@ module.exports = {
   webpack(config) {
     config.resolve.alias['~'] = path.join(__dirname, 'src')
     return config
+  },
+  sassOptions: {
+    prependData: '@import "./src/styles/variables.scss";'
   }
 }
