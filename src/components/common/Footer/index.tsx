@@ -1,13 +1,12 @@
-import React from 'react';
-import styles from "./styles.module.scss"
+import React from 'react'
+import styles from './styles.module.scss'
 
-
-const Footer:React.VFC = () => {
+const Footer: React.VFC = () => {
   return (
     <footer className={styles.footer}>
       <small className={styles.copy}>&copy; hungrypenguin</small>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

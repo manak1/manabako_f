@@ -1,7 +1,7 @@
-import axios, { AxiosResponse } from "axios"
-import { useCallback, useRef } from "react"
-import { getCookie } from "~/util/cookie"
-import { Question } from "~/@types/question"
+import axios, { AxiosResponse } from 'axios'
+import { useCallback, useRef } from 'react'
+import { getCookie } from '~/util/cookie'
+import { Question } from '~/@types/question'
 
 const createApi = () => {
   return axios.create({
@@ -18,7 +18,9 @@ export const usePostQuestion = () => {
     if (inProgress.current) return
     inProgress.current = true
     const api = createApi()
-    await api.post('/questions', { message }).catch((error) => { throw error })
+    await api.post('/questions', { message }).catch((error) => {
+      throw error
+    })
   }, [])
 
   return {
@@ -33,7 +35,9 @@ export const useGetQuestions = () => {
     if (inProgress.current) return
     inProgress.current = true
     const api = createApi()
-    const res = await api.get('/questions/answered').catch((error) => { throw error })
+    const res = await api.get('/questions/answered').catch((error) => {
+      throw error
+    })
     return res.data
   }, [])
 
@@ -49,7 +53,11 @@ export const useGetQuestionById = () => {
     if (inProgress.current) return
     inProgress.current = true
     const api = createApi()
-    const res: AxiosResponse<Question> = await api.get(`/questions/${id}`).catch((error) => { throw error })
+    const res: AxiosResponse<Question> = await api
+      .get(`/questions/${id}`)
+      .catch((error) => {
+        throw error
+      })
     return res.data
   }, [])
 
@@ -60,7 +68,11 @@ export const useGetQuestionById = () => {
 }
 
 export const fetchQuestionById = async (id: string) => {
-  const api = createApi();
-  const res: AxiosResponse<Question> = await api.get(`/questions/${id}`).catch((error) => { throw error })
+  const api = createApi()
+  const res: AxiosResponse<Question> = await api
+    .get(`/questions/${id}`)
+    .catch((error) => {
+      throw error
+    })
   return res.data
 }
