@@ -1,0 +1,21 @@
+.simpleButton {
+  width: 100%;
+  
+  .button {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 4px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    color:#fff;
+    background-color: $color_primary;
+
+    &.disabled {
+      pointer-events: none;
+      background-color: #c7c7c7;
+      color: #fff;
+      border: none;
+    }
+  }
+}
