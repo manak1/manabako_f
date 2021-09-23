@@ -11,7 +11,7 @@ type Props = {
 const SimpleButton: React.VFC<Props> = ({label, onClick, disabled}) => {
   return (
     <div className={styles.simpleButton}>
-      <button className={clsx(styles.button, disabled && styles.disabled)} onClick={onClick} disabled={disabled}>
+      <button type="button" className={clsx(styles.button, disabled && styles.disabled)} onClick={onClick} disabled={disabled}>
         { label }
       </button>
     </div>
