@@ -1,0 +1,12 @@
+.input {
+  width: 100%;
+  .textarea {
+    padding: 8px;
+    font-size: 12px;
+    height: 140px;
+    width: 100%;
+    border: 1px solid $color_separate;
+    outline: none;
+    resize: none;
+  }
+}
