@@ -1,0 +1,26 @@
+.answered {
+  padding: 24px 8px;
+  background-color: $color_secondary;
+  .form {
+    margin-top: 8px;
+  }
+  .title {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+  }
+  .item {
+    &:nth-child(n+2) {
+      margin-top: 12px;
+    }
+  }
+  .link {
+    color: #333;
+  }
+}
