@@ -1,0 +1,43 @@
+.question {
+  .profile {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+  }
+  .top {
+    background-color: $color_secondary;
+    padding: 12px 8px 32px 8px;
+  }
+  .logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid $color_separate;
+  }
+  .name {
+    margin-left: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $color_primary;
+  }
+  .answer {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    margin-top: 24px;
+  }
+  .link_text {
+    margin-left: 8px;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+    color: #333;
+  }
+}
