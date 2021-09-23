@@ -19,6 +19,7 @@
     ]
   },
   "dependencies": {
+    "@svgr/webpack": "^5.5.0",
     "axios": "^0.21.4",
     "next": "11.1.2",
     "nookies": "^2.5.2",
