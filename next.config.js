@@ -11,6 +11,6 @@ module.exports = {
     return config
   },
   sassOptions: {
-    prependData: '@import "./src/styles/variables.scss";'
+    prependData: '@import "./src/assets/styles/_global.scss";'
   }
 }
