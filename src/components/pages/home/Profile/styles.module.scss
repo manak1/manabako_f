@@ -1,0 +1,37 @@
+.profile {
+  padding: 8px 30px 16px 30px;
+  background-color: $color_secondary;
+  .image_wrapper {
+    border-radius: 100px;
+  }
+  .logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid $color_separate;
+  }
+  .box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .bio {
+    margin-left: 8px;
+  }
+  .name {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .link {
+    position: relative;
+    top: -8px;
+    display: inline-block;
+    font-size: 12px;
+    color: $color_link;
+  }
+  .introduce {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 12px;
+  }
+}
