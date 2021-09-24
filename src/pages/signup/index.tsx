@@ -23,7 +23,7 @@ const Signin = () => {
         <input
           value={username}
           onChange={(event) => setUsername(event.target.value)}
-          type="password"
+          type="text"
         />
       </div>
       <div>
@@ -31,7 +31,7 @@ const Signin = () => {
         <input
           value={password}
           onChange={(event) => setPassword(event.target.value)}
-          type="username"
+          type="password"
         />
       </div>
       <button type="button" onClick={onSubmit}>
