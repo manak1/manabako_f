@@ -11,7 +11,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
       <Head>
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no  user-scalable=0"
         />
       </Head>
       <Component {...pageProps} />
