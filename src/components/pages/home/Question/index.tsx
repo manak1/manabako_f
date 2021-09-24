@@ -16,7 +16,7 @@ const Question: React.VFC<Props> = ({ onClickSend }) => {
   }, [question])
 
   const isInValid = useMemo(() => {
-    return !(question.length >= 20 && question.length <= 300)
+    return !(question.length >= 5 && question.length <= 300)
   }, [question])
 
   const onClick = useCallback(() => {
