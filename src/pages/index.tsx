@@ -11,8 +11,8 @@ import { useGetQuestions, usePostQuestion } from '~/hooks/api/questions'
 
 const Home: NextPage = () => {
   const { fetch: fetchQuestions } = useGetQuestions()
-  const [questions, setQuestions] = useState([])
   const { fetch: postQuestion, progress } = usePostQuestion()
+  const [questions, setQuestions] = useState([])
 
   useEffect(() => {
     const init = async () => {
