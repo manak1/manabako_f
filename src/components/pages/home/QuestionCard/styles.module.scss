@@ -30,5 +30,12 @@
     font-size: 14px;
     line-height: 1.1;
     word-break: break-all;
+
+  }
+  
+  @media (min-width: 400px){
+    .question {
+      line-height: 1.5;
+    }
   }
 }
