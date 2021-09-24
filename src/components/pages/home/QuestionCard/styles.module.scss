@@ -7,7 +7,7 @@
 
   .box {
     max-width: 100%;
-    width: 80%;
+    width: 85%;
     left: 50%;
     transform: translate(-50%);
     position: absolute;
@@ -15,15 +15,20 @@
     align-items: center;
     top: 20px;
     height: 70%;
+    &.over {
+      height: 80%;
+    }
   }
 
   .question {
-    width: 80%;
+    width: 100%;
     left: 50%;
     transform: translate(-50%);
     position: absolute;
     text-align: center;
     font-weight: bold;
     font-size: 14px;
+    line-height: 1.1;
+    word-break: break-all;
   }
 }
