@@ -17,7 +17,7 @@ const NextHead: React.VFC<Props> = ({ title, image, url }) => {
         property="og:title"
         content={`${title ? `${title} | ` : ''}${siteTitle}`}
       />
-      <meta property="og:type" content="blog" />
+      <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content={title} />
