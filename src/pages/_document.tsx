@@ -12,6 +12,9 @@ class Document extends NextDocument {
             content="https://manabako.vercel.app/ogp.png"
           />
           <meta property="og:site_name" content="manabako" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@mikeanakida" />
+          <meta name="twitter:url" content="https://manabako.vercel.app/" />
         </Head>
         <body>
           <Main />
