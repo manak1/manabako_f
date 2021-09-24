@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 
   return (
     <Layout>
-      <Head/>
+      <Head />
       <Profile />
       <Question onClickSend={onConfirm} />
       <Answered questions={questions} />
