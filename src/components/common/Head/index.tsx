@@ -24,11 +24,11 @@ const NextHead: React.VFC<Props> = ({ title, image, url }) => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@mikeanakida" />
       <meta name="twitter:url" content={url} />
+      <meta name="twitter:image" content={image} />
       <meta
         name="twitter:title"
         content={`${title ? `${title} | ` : ''}${siteTitle}`}
       />
-      <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
     </Head>
   )

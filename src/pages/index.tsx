@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 
   return (
     <Layout>
-      <Head />
+      <Head image='https://manabako-cms.vercel.app/ogp.png' />
       <Profile />
       <Question onClickSend={onConfirm} />
       <Answered questions={questions} />
