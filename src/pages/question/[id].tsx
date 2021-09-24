@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useMemo } from 'react'
 import styles from './styles.module.scss'
 import { NotificationContainer, NotificationManager } from 'react-notifications'
 
@@ -34,22 +34,38 @@ const QuestionPage: NextPage<Props> = ({ question }) => {
     [postInProgress, postQuestion]
   )
 
+  const isTextOver = useMemo(
+    () => question.message.length >= 171,
+    [question.message]
+  )
+
+  const shortenQuestion = useCallback(
+    (question: string) => {
+      return isTextOver ? `${question.substring(0, 171)}...` : question
+    },
+    [isTextOver]
+  )
+
+  const setYPosition = useCallback(() => {
+    return isTextOver ? 'y_-50' : 'y_-100'
+  }, [isTextOver])
+
   const setOgp = (message: string) => {
     return `https://res.cloudinary.com/dugkfottw/image/upload/l_text:Sawarabi%20Gothic_40_bold:${encodeURIComponent(
       message
-    )},co_rgb:333,w_1000,c_fit,y_-100,h_860/v1632411860/ogp_k2yjcj.png`
+    )},co_rgb:333,w_1000,c_fit,${setYPosition()},h_860/v1632411860/ogp_k2yjcj.png`
   }
 
   return (
     <Layout>
       <Head
         title={question.message}
-        image={setOgp(question.message)}
-        url="rw"
+        image={setOgp(shortenQuestion(question.message))}
+        url={`https://manabako.vercel.app/questions/${question.id}`}
       />
       <div className={styles.question}>
         <div className={styles.top}>
-          <QuestionCard question={question.message} />
+          <QuestionCard showFull question={question.message} />
           <div className={styles.profile}>
             <img
               className={styles.logo}
