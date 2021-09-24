@@ -17,10 +17,14 @@
   }
   .item {
     &:nth-child(n + 2) {
-      margin-top: 12px;
+      margin-top: 24px;
     }
   }
   .link {
     color: #333;
+  }
+  .loader {
+    margin-top: 8px;
+    text-align: center;
   }
 }
