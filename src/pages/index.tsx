@@ -12,7 +12,7 @@ import { useGetQuestions, usePostQuestion } from '~/hooks/api/questions'
 const Home: NextPage = () => {
   const { fetch: fetchQuestions } = useGetQuestions()
   const { fetch: postQuestion, progress } = usePostQuestion()
-  const [questions, setQuestions] = useState([])
+  const [questions, setQuestions] = useState(null)
 
   useEffect(() => {
     const init = async () => {
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 
   return (
     <Layout>
-      <Head image='https://manabako-cms.vercel.app/ogp.png' />
+      <Head image="https://manabako-cms.vercel.app/ogp.png" />
       <Profile />
       <Question onClickSend={onConfirm} />
       <Answered questions={questions} />
