@@ -9,10 +9,10 @@ const Header = () => {
     <header className={styles.header}>
       <Link href="/" passHref>
         <a className={styles.link}>
-        <div className={styles.box}>
-          <Logo className={styles.logo} alt="manabakoロゴ" />
-          <h1 className={styles.title}>manabako</h1>
-        </div>
+          <div className={styles.box}>
+            <Logo className={styles.logo} alt="manabakoロゴ" />
+            <h1 className={styles.title}>manabako</h1>
+          </div>
         </a>
       </Link>
     </header>
