@@ -4,6 +4,10 @@ class Document extends NextDocument {
     return (
       <Html lang="ja">
         <Head>
+          <meta
+          property="og:title"
+          content='manabako'
+        />
           <link rel="shortcut icon" href="/favicon.ico" />
           <meta property="og:type" content="blog" />
           <meta property="og:url" content="https://manabako.vercel.app/" />

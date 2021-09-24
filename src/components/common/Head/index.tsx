@@ -4,9 +4,9 @@ import Head from 'next/head'
 const siteTitle = 'manabako'
 
 interface Props {
-  title: string
-  image: string
-  url: string
+  title?: string
+  image?: string
+  url?: string
 }
 
 const NextHead: React.VFC<Props> = ({ title, image, url }) => {

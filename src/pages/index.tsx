@@ -4,6 +4,7 @@ import { NextPage } from 'next'
 import Profile from '~/components/pages/home/Profile'
 import Question from '~/components/pages/home/Question'
 import Answered from '~/components/pages/home/Answered'
+import Head from '~/components/common/Head'
 import Layout from '~/layout/HeaderFooterLayout'
 
 import { useGetQuestions, usePostQuestion } from '~/hooks/api/questions'
@@ -35,6 +36,7 @@ const Home: NextPage = () => {
 
   return (
     <Layout>
+      <Head/>
       <Profile />
       <Question onClickSend={onConfirm} />
       <Answered questions={questions} />
