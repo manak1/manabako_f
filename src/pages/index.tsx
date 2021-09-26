@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { NextPage } from 'next'
+import { NotificationContainer, NotificationManager } from 'react-notifications'
 
 import Profile from '~/components/pages/home/Profile'
 import Question from '~/components/pages/home/Question'
@@ -8,6 +9,7 @@ import Head from '~/components/common/Head'
 import Layout from '~/layout/HeaderFooterLayout'
 
 import { useGetQuestions, usePostQuestion } from '~/hooks/api/questions'
+
 
 const Home: NextPage = () => {
   const { fetch: fetchQuestions } = useGetQuestions()
@@ -28,8 +30,10 @@ const Home: NextPage = () => {
     async (question: string) => {
       if (progress) return
       await postQuestion(question).catch((error) => {
+        NotificationManager.error('質問の投稿に失敗しました。','', 2000)
         throw error
       })
+      NotificationManager.success('質問を投稿しました！','', 2000)
     },
     [postQuestion, progress]
   )
@@ -40,6 +44,7 @@ const Home: NextPage = () => {
       <Profile />
       <Question onClickSend={onConfirm} />
       <Answered questions={questions} />
+      <NotificationContainer/>
     </Layout>
   )
 }
