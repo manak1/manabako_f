@@ -10,7 +10,6 @@ import Layout from '~/layout/HeaderFooterLayout'
 
 import { useGetQuestions, usePostQuestion } from '~/hooks/api/questions'
 
-
 const Home: NextPage = () => {
   const { fetch: fetchQuestions } = useGetQuestions()
   const { fetch: postQuestion, progress } = usePostQuestion()
@@ -30,10 +29,10 @@ const Home: NextPage = () => {
     async (question: string) => {
       if (progress) return
       await postQuestion(question).catch((error) => {
-        NotificationManager.error('質問の投稿に失敗しました。','', 2000)
+        NotificationManager.error('質問の投稿に失敗しました。', '', 2000)
         throw error
       })
-      NotificationManager.success('質問を投稿しました！','', 2000)
+      NotificationManager.success('質問を投稿しました！', '', 2000)
     },
     [postQuestion, progress]
   )
@@ -44,7 +43,7 @@ const Home: NextPage = () => {
       <Profile />
       <Question onClickSend={onConfirm} />
       <Answered questions={questions} />
-      <NotificationContainer/>
+      <NotificationContainer />
     </Layout>
   )
 }

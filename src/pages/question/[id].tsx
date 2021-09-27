@@ -27,10 +27,10 @@ const QuestionPage: NextPage<Props> = ({ question }) => {
     async (question: string) => {
       if (postInProgress) return
       await postQuestion(question).catch((error) => {
-        NotificationManager.error('質問の投稿に失敗しました','',2000)
+        NotificationManager.error('質問の投稿に失敗しました', '', 2000)
         throw error
       })
-      NotificationManager.success('質問を投稿しました！','',2000)
+      NotificationManager.success('質問を投稿しました！', '', 2000)
     },
     [postInProgress, postQuestion]
   )

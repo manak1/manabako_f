@@ -32,7 +32,7 @@ const Answered: React.VFC<Props> = ({ questions }) => {
       ) : (
         <div className={styles.loader}>
           <Loader
-            type="ThreeDots"
+            type="Hearts"
             color="rgb(29, 161, 242)"
             width={30}
             height={30}
